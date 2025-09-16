@@ -29,7 +29,7 @@ A beautiful, responsive web interface for chatting with Maiths, your AI Tech Gir
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone [https://github.com/yash-agrawal03/maiths-ai-girlfriend-frontend.git]
    cd maiths-ai-gf-frontend
    ```
 
