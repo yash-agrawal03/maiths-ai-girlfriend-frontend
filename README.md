@@ -7,6 +7,14 @@ A beautiful, responsive web interface for chatting with Maiths, your AI Tech Gir
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
+## 🎥 Demo Video
+
+**See Maiths in action!** Watch our cute AI girlfriend interface come to life:
+
+[🎬 **Watch Demo Video** 💖](https://drive.google.com/file/d/1r0Q8819U2n0KenjfkdP0OQkkRQQIh-Ka/view?usp=sharing)
+
+*Experience the adorable chat interface, floating hearts animations, and smooth interactions with Maiths!*
+
 ## ✨ Features
 
 - 🎀 **Adorable Design** - Pink/purple gradient theme with cute animations
