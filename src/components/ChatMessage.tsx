@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, User, Heart } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Message {
   id: string;
@@ -59,6 +60,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
           {/* Message Text with Markdown Support */}
           <div className="text-sm leading-relaxed chat-markdown">
             <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
               components={{
                 // Custom styling for markdown elements
                 p: ({ children }) => <p>{children}</p>,
@@ -80,6 +82,55 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
                   <blockquote className={isUser ? 'border-blue-200' : 'border-pink-300'}>
                     {children}
                   </blockquote>
+                ),
+                // Table components with proper styling
+                table: ({ children }) => (
+                  <div className="table-wrapper">
+                    <table className={`border ${
+                      isUser 
+                        ? 'border-blue-200' 
+                        : 'border-pink-200'
+                    }`}>
+                      {children}
+                    </table>
+                  </div>
+                ),
+                thead: ({ children }) => (
+                  <thead className={`${
+                    isUser 
+                      ? 'bg-blue-500/20' 
+                      : 'bg-pink-100'
+                  }`}>
+                    {children}
+                  </thead>
+                ),
+                tbody: ({ children }) => <tbody>{children}</tbody>,
+                tr: ({ children }) => (
+                  <tr className={`border-b ${
+                    isUser 
+                      ? 'border-blue-200/50' 
+                      : 'border-pink-200/50'
+                  }`}>
+                    {children}
+                  </tr>
+                ),
+                th: ({ children }) => (
+                  <th className={`px-3 py-2 text-left font-semibold border-r ${
+                    isUser 
+                      ? 'border-blue-200/50 text-blue-100' 
+                      : 'border-pink-200/50 text-pink-800'
+                  }`}>
+                    {children}
+                  </th>
+                ),
+                td: ({ children }) => (
+                  <td className={`px-3 py-2 border-r ${
+                    isUser 
+                      ? 'border-blue-200/30' 
+                      : 'border-pink-200/30'
+                  }`}>
+                    {children}
+                  </td>
                 ),
               }}
             >

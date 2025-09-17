@@ -114,3 +114,50 @@ code {
   opacity: 0.8;
   font-style: italic;
 }
+
+/* Table styling for chat messages */
+.chat-markdown table {
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+}
+
+.chat-markdown thead {
+  font-weight: 600;
+}
+
+.chat-markdown th,
+.chat-markdown td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.chat-markdown th {
+  font-weight: 700;
+  font-size: 0.8125rem;
+}
+
+.chat-markdown td {
+  font-size: 0.8125rem;
+}
+
+/* Responsive table wrapper */
+.chat-markdown .table-wrapper {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
+.chat-markdown .table-wrapper table {
+  margin: 0;
+  display: table;
+  white-space: nowrap;
+}
