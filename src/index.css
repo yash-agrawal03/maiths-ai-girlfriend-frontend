@@ -66,3 +66,51 @@ code {
   white-space: nowrap;
   animation: typewriter 2s steps(40, end), blink-caret 0.75s step-end infinite;
 }
+
+/* Custom markdown styling for chat messages */
+.chat-markdown {
+  line-height: 1.5;
+}
+
+.chat-markdown p {
+  margin: 0 0 0.5rem 0;
+}
+
+.chat-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-markdown strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+.chat-markdown em {
+  font-style: italic;
+  color: inherit;
+}
+
+.chat-markdown code {
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+.chat-markdown ul, .chat-markdown ol {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.chat-markdown li {
+  margin: 0.25rem 0;
+}
+
+.chat-markdown blockquote {
+  border-left: 3px solid currentColor;
+  padding-left: 0.75rem;
+  margin: 0.5rem 0;
+  opacity: 0.8;
+  font-style: italic;
+}

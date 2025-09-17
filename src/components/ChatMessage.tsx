@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, User, Heart } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 
 interface Message {
   id: string;
@@ -55,10 +56,36 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
               : 'bg-white/90 backdrop-blur-sm border border-pink-200 text-gray-800'
           }`}
         >
-          {/* Message Text */}
-          <p className="text-sm leading-relaxed whitespace-pre-wrap">
-            {message.text}
-          </p>
+          {/* Message Text with Markdown Support */}
+          <div className="text-sm leading-relaxed chat-markdown">
+            <ReactMarkdown
+              components={{
+                // Custom styling for markdown elements
+                p: ({ children }) => <p>{children}</p>,
+                strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+                em: ({ children }) => <em className="italic">{children}</em>,
+                code: ({ children }) => (
+                  <code className={`font-mono ${
+                    isUser 
+                      ? 'bg-white/20 text-blue-100' 
+                      : 'bg-pink-100 text-pink-800'
+                  }`}>
+                    {children}
+                  </code>
+                ),
+                ul: ({ children }) => <ul className="list-disc">{children}</ul>,
+                ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
+                li: ({ children }) => <li>{children}</li>,
+                blockquote: ({ children }) => (
+                  <blockquote className={isUser ? 'border-blue-200' : 'border-pink-300'}>
+                    {children}
+                  </blockquote>
+                ),
+              }}
+            >
+              {message.text}
+            </ReactMarkdown>
+          </div>
           
           {/* Timestamp */}
           <div className={`text-xs mt-1 ${
