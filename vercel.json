@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "name": "maiths-ai-girlfriend-frontend",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|ico|svg)$)",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "REACT_APP_API_URL": "https://maiths-ai-girlfriend-backend.onrender.com",
+    "REACT_APP_API_TIMEOUT": "30000",
+    "REACT_APP_FLOATING_HEARTS": "true",
+    "REACT_APP_ENABLE_ANIMATIONS": "true"
+  }
+}

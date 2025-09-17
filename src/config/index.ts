@@ -2,7 +2,7 @@
 export const config = {
   // Backend API configuration
   api: {
-    baseUrl: process.env.REACT_APP_API_URL || 'http://localhost:5000',
+    baseUrl: process.env.REACT_APP_API_URL || 'https://maiths-ai-girlfriend-backend.onrender.com',
     timeout: 30000, // 30 seconds
     endpoints: {
       chat: '/chat',
