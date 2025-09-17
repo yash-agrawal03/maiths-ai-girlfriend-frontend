@@ -11,7 +11,7 @@ A beautiful, responsive web interface for chatting with Maiths, your AI Tech Gir
 
 **See Maiths in action!** Watch our cute AI girlfriend interface come to life:
 
-[🎬 **Watch Demo Video** 💖](https://drive.google.com/file/d/1r0Q8819U2n0KenjfkdP0OQkkRQQIh-Ka/view?usp=sharing)
+[🎬 **Watch Demo Video** 💖](https://github.com/user-attachments/assets/1c804678-df1d-495e-a8ce-8682b28e26d8)
 
 *Experience the adorable chat interface, floating hearts animations, and smooth interactions with Maiths!*
 
