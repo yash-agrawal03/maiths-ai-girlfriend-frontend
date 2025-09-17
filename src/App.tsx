@@ -212,12 +212,16 @@ function App() {
               <span>Yash Agrawal</span>
             </motion.a>
             <span>using</span>
-            <motion.span
+            <motion.a
+              href="https://smythos.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
-              className="font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"
+              whileTap={{ scale: 0.95 }}
+              className="font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent hover:from-pink-600 hover:to-purple-700 transition-colors duration-200 cursor-pointer"
             >
               Smyth OS
-            </motion.span>
+            </motion.a>
           </div>
         </motion.footer>
       </div>

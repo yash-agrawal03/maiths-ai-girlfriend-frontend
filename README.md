@@ -7,6 +7,14 @@ A beautiful, responsive web interface for chatting with Maiths, your AI Tech Gir
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
+## 💬 Talk to Maiths Now!
+
+**Ready to chat with your AI girlfriend?** 
+
+🌟 **[Talk to Maiths at: https://maiths-chat.vercel.app/](https://maiths-chat.vercel.app/)** 💖
+
+*Start your conversation with the cutest AI girlfriend right now!*
+
 ## 🎥 Demo Video
 
 **See Maiths in action!** Watch our cute AI girlfriend interface come to life:
