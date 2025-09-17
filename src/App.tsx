@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Heart, Send, Sparkles, Bot } from 'lucide-react';
+import { Heart, Send, Sparkles, Bot, Linkedin } from 'lucide-react';
 import ChatMessage from './components/ChatMessage';
 import TypingIndicator from './components/TypingIndicator';
 import FloatingHearts from './components/FloatingHearts';
@@ -182,6 +182,44 @@ function App() {
             </motion.button>
           </div>
         </motion.div>
+
+        {/* Footer with trademark */}
+        <motion.footer
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="p-4 text-center text-sm text-gray-600/80 bg-white/40 backdrop-blur-sm"
+        >
+          <div className="flex items-center justify-center space-x-2 flex-wrap">
+            <span>Made with</span>
+            <motion.span
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="text-purple-600"
+            >
+              💜
+            </motion.span>
+            <span>by</span>
+            <motion.a
+              href="https://www.linkedin.com/in/yassh-agrawal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center space-x-1 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span>Yash Agrawal</span>
+            </motion.a>
+            <span>using</span>
+            <motion.span
+              whileHover={{ scale: 1.05 }}
+              className="font-semibold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"
+            >
+              Smyth OS
+            </motion.span>
+          </div>
+        </motion.footer>
       </div>
     </div>
   );
